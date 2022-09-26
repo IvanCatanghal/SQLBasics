@@ -1,0 +1,24 @@
+SELECT *
+FROM student
+WHERE major = 'Chemistry' OR name = 'Kate';
+
+WHERE name IN ('Claire', 'Kate', 'Mike') 
+
+
+
+
+
+
+
+
+
+/*
+* -- EVERY COLUMN
+SELECT can be different choices ie, name, major, student_id etc.
+ORDER BY -- can have different choices ie, major, student_id
+-- ascending order default, put DESC if want descending, ASC ascending
+LIMIT -- how many you want
+WHERE -- specific like major etc
+comparison operators in where -- <,>,<=,>=,=,<>,AND,OR
+IN -- specific choices
+*/
