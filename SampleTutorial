@@ -1,0 +1,14 @@
+CREATE TABLE student (
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY (student_id)
+    );
+DESCRIBE student; /*DEFINTE TABLE PROPERTIES IE student_id INT, etc*/
+
+
+DROP TABLE student; /*DELETE TABLE*/
+
+ALTER TABLE student ADD gpa DECIMAL(3,2); /*EDIT TABLE*/
+
+ALTER TABLE student DROP COLUMN gpa;
