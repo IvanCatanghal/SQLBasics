@@ -1,0 +1,21 @@
+SELECT *
+FROM student;
+
+UPDATE student
+SET major = 'Biochemistry'
+WHERE major = 4;
+
+DELETE FROM student
+WHERE student_id=5;
+
+
+
+
+/*
+Updating command is SET and WHERE
+SET = the updated term
+WHERE = old term to be updated
+SET and WHERE keywords can either be student_id, name or major, can put multiple commands major = xx, student_id = xx
+AND OR operation can be used
+DELETE FROM same with updating
+*/
