@@ -1,0 +1,37 @@
+CREATE TABLE trigger_test (
+    message VARCHAR (100)
+);
+
+/* this is done on SQL commmand line */
+DELIMITER $$
+CREATE 
+    TRIGGER my_trigger BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+        INSERT INTO trigger_test VALUE ('added new employee');
+    END $$
+DELIMETER ;
+
+DELIMITER $$
+CREATE 
+    TRIGGER my_trigger1 BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+        INSERT INTO trigger_test VALUES (NEW.first_name);
+    END $$
+DELIMETER ;
+
+DELIMITER $$
+CREATE 
+    TRIGGER my_trigger2 BEFORE INSERT
+    ON employee
+    FOR EACH ROW BEGIN
+        IF NEW.sex ='M' THEN
+            INSERT INTO trigger_test VALUES ('ADDED MALE EMPLOYEE')
+        ELSEIF NEW.sex = 'F' THEN
+            INSERT INTO trigger_test VALUES ('ADDED FEMALE EMPLOYEE')
+        ELSE
+            INSERT INTO trigger_test VALUES ('ADDED ANOTHER EMPLOYEE');
+        END IF;
+    END $$
+DELIMETER ;
