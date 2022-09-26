@@ -1,0 +1,15 @@
+CREATE TABLE student (
+    student_id INT,
+    name VARCHAR(20),
+    major VARCHAR(20),
+    PRIMARY KEY (student_id)
+    );
+
+    SELECT * FROM student;  
+    /* grab all data */
+
+    INSERT INTO student VALUES(2,'Kate','Sociology');  
+    /*string should always have ''*/
+
+    INSERT INTO student(student_id, name) VALUES(3,'Claire');  
+    /*if you cant input a data in a specific table*/
