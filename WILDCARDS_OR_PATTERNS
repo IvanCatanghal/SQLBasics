@@ -1,0 +1,21 @@
+/* % = ANY # CHARACTERS, _ = ONE CHARACTER */
+
+/* FIND ANY CLIENT WHO ARE AN LLC */
+SELECT *
+FROM client
+WHERE client_name LIKE '%LLC';
+
+/* FIND ANY BRANCH SUPPLIERS WHO ARE IN THE LABEL BUSINESS */
+SELECT *
+FROM branch_supplier
+WHERE supplier_name LIKE '%Label%';
+
+/* FIND ANY EMPLOYEE BORN IN OCTOBER */
+SELECT *
+FROM employee
+WHERE birth_date LIKE '____-10%';
+
+/*FIND ANY CLIENTS WHO ARE SCHOOLS */
+SELECT *
+FROM client
+WHERE client_name LIKE '%school%';
