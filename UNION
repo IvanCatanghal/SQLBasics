@@ -1,0 +1,32 @@
+/* 
+RULE 1 MUST INCLUDE SAME COLUMN ie. 
+SELECT XXX,
+UNION 
+SELECT XXX;
+
+RULE 2 HAVE SAME DATATYPE
+*/
+
+/* FIND A LIST OF EMPLOYEE AND BRANCH NAMES */
+SELECT first_name AS Company_names
+FROM employee
+UNION
+SELECT branch_name
+FROM branch
+UNION
+SELECT client_name
+FROM client;
+
+/* FIND A LIST OF ALL CLIENTS AND BRANCH SUPPLIER NAMES */
+SELECT client_name, client.branch_id
+from client
+UNION 
+SELECT supplier_name, branch_supplier.branch_id
+FROM branch_supplier;
+
+/* FIND A LIST OF ALL MONEY SPENT AND EARNED BY COMPANY */
+SELECT salary
+FROM employee
+UNION
+SELECT total_sales
+FROM works_with;
