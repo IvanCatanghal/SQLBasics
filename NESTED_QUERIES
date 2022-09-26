@@ -1,0 +1,19 @@
+/* FIND NAMES OF ALL EMPLOYEES WHO HAVE SOLD OVER 30,000 TO A SINGLE CLIENT */
+SELECT first_name, last_name
+FROM employee
+WHERE emp_id IN(
+    SELECT emp_id
+    FROM works_with
+    WHERE total_sales > 30000
+);
+
+/* FIND ALL CLIENTS WHO ARE HANDLED BY THE BRANCH THAT MICHAEL MANAGES
+ASSUME YOU KNOW MICHAELS ID */
+SELECT client_name
+FROM client
+WHERE branch_id = (
+    SELECT branch_id 
+    FROM branch
+    WHERE mgr_id = '102'
+    LIMIT 1
+);
