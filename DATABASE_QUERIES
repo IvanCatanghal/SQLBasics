@@ -1,0 +1,38 @@
+/* FIND ALL EMPLOYEES */
+SELECT *
+FROM employee;
+
+/* FIND ALL CLIENTS */
+SELECT *
+FROM client;
+
+/* FIND ALL EMPLOYEES ORDERED BY SALARY */
+SELECT *
+FROM employee
+ORDER BY salary DESC;
+
+/* FIND ALL EMPLOYEES ORDERED BY SEX THEN NAME */
+SELECT *
+FROM employee
+ORDER BY sex, first_name, last_name;
+
+/* FIND THE FIRST 5 EMPLOYEE IN THE TABLE */
+SELECT *
+FROM employee
+LIMIT 5;
+
+/* FIRST AND LAST NAME OF ALL EMPLOYEE */
+SELECT first_name, last_name
+FROM EMPLOYEE;
+
+/* FIND FORENAME AND SURNAME ALL EMPLOYEE */
+SELECT first_name AS forename, last_name AS surname
+FROM employee;
+
+/* FIND ALL DIFF GENDERS */
+SELECT DISTINCT SEX 
+FROM employee
+
+/* ALL DIFF BRANCH ID */
+SELECT DISTINCT branch_id
+FROM employee;
