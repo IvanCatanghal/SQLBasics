@@ -1,0 +1,22 @@
+INSERT INTO branch VALUES(4, 'Buffalo', NULL, NULL);
+
+/* find all branches and the names of their manager */
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+JOIN branch
+ON employee.emp_id = branch.mgr_id
+
+/* 
+same as above where
+ALL VALUES  FROM THE LEFT TABLE ARE INCLUDED, THIS CASE FROM EMPLOYEE table 
+*/
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+LEFT JOIN branch
+ON employee.emp_id = branch.mgr_id
+
+/* ALL VALUES  FROM THE RIGHT TABLE ARE INCLUDED, THIS CASE FROM branch table */
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch
+ON employee.emp_id = branch.mgr_id
